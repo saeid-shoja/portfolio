@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saeid-shoja/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saeid-shoja/portfolio/issues"
+  },
+  "homepage": "https://github.com/saeid-shoja/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
