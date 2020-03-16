@@ -1,0 +1,257 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+.left-menu {
+  height: 160vh;
+  width: 25%;
+  overflow: scroll;
+  padding-top: 30px;
+  background-color: #f2f3f7;
+  padding-top: 40px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+#avatar {
+  margin-top: 30px;
+  height: 170px;
+  width: 170px;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.avatar-name {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Playfair";
+}
+
+.about {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#main-menu {
+  text-align: center;
+  line-height: 40px;
+  margin-top: 20px;
+  font-size: 12px;
+  list-style: none;
+}
+
+#main-menu a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  position: relative;
+}
+
+.blue-border {
+  position: absolute;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background-color: #2c98f0;
+}
+
+@keyframes blue-border-animation {
+  0% {
+    width: 0;
+    bottom: 5px;
+  }
+  50% {
+    width: 50%;
+    bottom: 5px;
+  }
+  100% {
+    width: 100%;
+    bottom: 10px;
+  }
+}
+
+#main-menu a:hover .blue-border {
+  width: 100%;
+  bottom: 10px;
+  height: 2px;
+  animation: blue-border-animation 300ms;
+}
+
+.about-1 {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 50px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 30px;
+}
+
+.copy-right {
+  text-decoration: none;
+  color: #2c98f0;
+}
+
+.right-menu {
+  width: 70%;
+  background-color: white;
+  float: right;
+  text-align: center;
+}
+
+.my-style {
+  height: 170vh;
+  left: 0;
+  right: auto;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.pic1,
+.pic2 {
+  width: 850px;
+  height: 130vh;
+}
+
+.pic1 {
+  margin: auto;
+  left: 0;
+  top: 0;
+  position: absolute;
+  animation: slide1 20s infinite;
+  animation-delay: 8s;
+  opacity: 1;
+  box-shadow: 15px 20px 20px gray;
+}
+
+.pic2 {
+  margin: auto;
+  left: 0;
+  top: 0;
+  position: absolute;
+  animation: slide2 20s infinite;
+  animation-delay: 8s;
+  opacity: 0;
+  box-shadow: 15px 20px 20px gray;
+}
+
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide2 {
+  form {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.me {
+  left: 100px;
+  top: 20px;
+  position: absolute;
+  z-index: 1;
+  font-size: 50px;
+  font-weight: 1500;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.my-job {
+  left: 240px;
+  top: 20px;
+  position: absolute;
+  z-index: 1;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ability {
+  left: 30px;
+  top: 140px;
+  position: absolute;
+  z-index: 1;
+}
+
+.bottom-cv a {
+  text-decoration: none;
+  color: rgb(58, 56, 56);
+  display: inline;
+  width: 150px;
+  height: 35px;
+  background-color: rgb(13, 175, 99);
+  text-transform: uppercase;
+  z-index: 2;
+  position: absolute;
+  border: 1px rgb(0, 0, 0) solid;
+  border-radius: 3px;
+  text-align: center;
+  left: 40px;
+  bottom: 200px;
+  box-shadow: 15px 20px 20px gray;
+}
+
+.bottom-pfl a {
+  right: 40px;
+  bottom: 200px;
+  text-decoration: none;
+  color: rgb(58, 56, 56);
+  display: inline;
+  width: 150px;
+  height: 35px;
+  background-color: rgb(13, 175, 99);
+  text-transform: uppercase;
+  z-index: 2;
+  position: absolute;
+  border: 1px black solid;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 900px;
+  box-shadow: 15px 20px 20px gray;
+}
+
+.pfl-link {
+  padding-top: 5px;
+  font-weight: 900;
+}
+
+.cv-link {
+  padding-top: 5px;
+  font-weight: 900;
+}
