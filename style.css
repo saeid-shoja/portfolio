@@ -26,7 +26,7 @@ body {
   margin-top: 30px;
   height: 170px;
   width: 170px;
-  border-radius: 100px;
+  clip-path: circle(80px);
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -122,32 +122,21 @@ body {
   position: relative;
 }
 
-.pic1,
-.pic2 {
+.pic {
   width: 850px;
   height: 130vh;
-}
-
-.pic1 {
-  margin: auto;
-  left: 0;
-  top: 0;
-  position: absolute;
-  animation: slide1 20s infinite;
-  animation-delay: 8s;
-  opacity: 1;
   box-shadow: 15px 20px 20px gray;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
 .pic2 {
-  margin: auto;
-  left: 0;
-  top: 0;
-  position: absolute;
-  animation: slide2 20s infinite;
-  animation-delay: 8s;
-  opacity: 0;
-  box-shadow: 15px 20px 20px gray;
+  animation: slide1 16s infinite;
+  animation-direction: alternate;
 }
 
 @keyframes slide1 {
@@ -156,31 +145,18 @@ body {
   }
 
   50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes slide2 {
-  form {
-    opacity: 0;
-  }
-
-  50% {
     opacity: 1;
   }
 
-  90% {
-    opacity: 0.1;
+  60%{
+    opacity: 0;
   }
 
-  100% {
+  100%{
     opacity: 0;
   }
 }
+
 
 .me {
   left: 100px;
@@ -209,47 +185,28 @@ body {
   z-index: 1;
 }
 
-.bottom-cv a {
-  text-decoration: none;
-  color: rgb(58, 56, 56);
-  display: inline;
-  background-color: rgb(13, 175, 99);
-  text-transform: uppercase;
-  z-index: 2;
-  position: absolute;
-  border: 1px rgb(0, 0, 0) solid;
-  border-radius: 3px;
-  text-align: center;
-  left: 40px;
-  bottom: 200px;
+.bottom {
   box-shadow: 15px 20px 20px gray;
-}
-
-.bottom-pfl a {
-  right: 40px;
-  bottom: 200px;
-  text-decoration: none;
-  color: rgb(58, 56, 56);
-  display: inline;
-  width: 150px;
-  height: 35px;
-  background-color: rgb(13, 175, 99);
-  text-transform: uppercase;
-  z-index: 2;
-  position: absolute;
-  border: 1px black solid;
-  border-radius: 3px;
+  background-color: aqua;
+  display: inline-block;
   text-align: center;
-  font-weight: 900px;
-  box-shadow: 15px 20px 20px gray;
+  text-decoration: none;
+  color: rgb(43, 39, 39);
+  position: relative;
+  width: 170px;
+  height: 45px;
+  border-radius: 50px;
+  top: 130vh;
+  right: 7%;
 }
 
-.pfl-link {
-  padding-top: 5px;
-  font-weight: 900;
-}
-
-.cv-link {
-  padding-top: 5px;
-  font-weight: 900;
+.link {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: rgb(39, 36, 36);
 }
