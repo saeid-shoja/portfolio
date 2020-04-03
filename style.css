@@ -20,6 +20,7 @@ body {
   padding-top: 40px;
   margin-left: 20px;
   position: fixed;
+  top: 10px;
 }
 
 #avatar {
@@ -30,33 +31,94 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  animation: ComeFromTop 1s forwards;
 }
 
 .avatar-name {
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
   margin-top: 30px;
   font-family: "Playfair";
+  animation: ComeFromRight 1S forwards;
 }
 
 .about {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   margin-top: 5px;
   color: rgba(0, 0, 0, 0.7);
+  animation: ComeFromLeft 1s forwards;
+}
+
+
+@keyframes ComeFromLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(25px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+@keyframes ComeFromRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(-25px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes ComeFromTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(25px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes ComeFromDown {
+  0% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 #main-menu {
   text-align: center;
   line-height: 40px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 13px;
   list-style: none;
 }
 
 #main-menu a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(8, 3, 3, 0.7);
   display: inline-block;
   position: relative;
 }
@@ -99,6 +161,7 @@ body {
   margin-top: 50px;
   color: rgba(0, 0, 0, 0.5);
   line-height: 30px;
+  animation: ComeFromDown 1s forwards;
 }
 
 .copy-right {
@@ -109,8 +172,9 @@ body {
 .right-menu {
   width: 70%;
   background-color: white;
-  float: right;
+  float: left;
   text-align: center;
+  margin-left: 400px;
 }
 
 .my-style {
@@ -123,19 +187,16 @@ body {
 }
 
 .pic {
-  width: 850px;
-  height: 130vh;
-  box-shadow: 15px 20px 20px gray;
+  width: 98%;
+  height: 88vh;
   position: absolute;
   margin: auto;
-  top: 0;
-  left: 0;
-  border-top-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  top: 10px;
+  left: 1px;
 }
 
 .pic2 {
-  animation: slide1 16s infinite;
+  animation: slide1 12s infinite;
   animation-direction: alternate;
 }
 
@@ -160,22 +221,24 @@ body {
 
 .me {
   left: 100px;
-  top: 20px;
+  top: 30px;
   position: absolute;
   z-index: 1;
   font-size: 50px;
   font-weight: 1500;
   font-family: "Times New Roman", Times, serif;
+  animation: ComeFromLeft 1.5s forwards;
 }
 
 .my-job {
-  left: 240px;
+  left: 250px;
   top: 20px;
   position: absolute;
   z-index: 1;
   font-size: 25px;
   font-weight: 900;
   font-family: "Times New Roman", Times, serif;
+  animation: ComeFromRight 1.5s forwards;
 }
 
 .ability {
@@ -183,21 +246,23 @@ body {
   top: 140px;
   position: absolute;
   z-index: 1;
+  animation: ComeFromDown 1.5s forwards;
 }
 
 .bottom {
   box-shadow: 15px 20px 20px gray;
-  background-color: aqua;
+  background-color: rgb(212, 216, 216);
   display: inline-block;
   text-align: center;
   text-decoration: none;
   color: rgb(43, 39, 39);
   position: relative;
-  width: 170px;
+  width: 190px;
   height: 45px;
   border-radius: 50px;
-  top: 130vh;
-  right: 7%;
+  top: 90vh;
+  right: 3%;
+  animation: hire-bottom 2s forwards;
 }
 
 .link {
@@ -206,9 +271,13 @@ body {
   font-weight: bolder;
   font-size: large;
   position: absolute;
-  right: 30px;
+  right: 40px;
   top: 10px;
   color: rgb(39, 36, 36);
+}
+
+.link:hover {
+  color: brown;
 }
 
 .abaut-us {
@@ -218,32 +287,207 @@ body {
   position: absolute;
   width: 65%;
   height: 30vh;
-  top: 150vh;
-  left: 410px;
+  top: 115vh;
+  left: 450px;
   line-height: 2;
+  animation: ComeFromLeft 1.5s forwards;
 }
 
 .who {
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 60px;
+  animation: ComeFromLeft 1.5s forwards;
+}
+
+.who-h {
   font-family: "Playfair";
+  animation: ComeFromLeft 1.5s forwards;
 }
 
 .category {
   float: left;
-  text-align: center;
-  margin: 20px 18px;
-  padding-top: 70px;
-  padding-right: 35px; 
-  width: 180px;
-  height: 180px;
+  margin: 25px 21px;
+  padding-top: 100px;
+  width: 200px;
+  height: 200px;
   background-color: rgb(248, 245, 250);
-  box-shadow: rgb(99, 96, 96) 20px 35px 100px;
+  box-shadow: rgb(187, 182, 182) 20px 35px 100px;
+  position: relative;
+  background-color: rgb(233, 226, 215);
 }
 
-.img {
+.img-icon:hover {
+  animation: category-anim .5s forwards;
+}
+
+@keyframes category-anim {
+  0% {
+    transform: translate(0);
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+
+.category h3 {
+  margin-left: 15px;
+}
+
+.category-grafic {
+  border-bottom: solid 3px palevioletred;
+}
+
+.category-web {
+  border-bottom: solid 3px blue;
+}
+
+.category-software {
+  border-bottom: solid 3px yellow;
+}
+
+.category-app {
+  border-bottom: solid 3px red;
+}
+
+.img-icon {
   width: 50px;
   height: 50px;
-  padding-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 15px; 
+}
+
+.hire-me {
+  width: 65%;
+  height: 25vh;
+  margin-top: 40vh;
+  margin-right: 70px;
+  float: right;
+  background-color: rgb(232, 245, 52);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  animation: ComeFromLeft 1.5s forwards;
+}
+
+.hire-head {
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 30px;
+  font-weight: 100;
+  font-family: "Playfair";
+  float: left;
+}
+
+.bottom-hire-me {
+  border: solid rgb(152, 161, 27) 2px;
+  margin-top: 100px;
+  margin-left: -400px;
+  color: black;
+  text-decoration: none;
+  width: 90px;
+  text-align: center;
+  height: 35px;
+  font-size: 18px;
+  float: left;
+  border-radius: 10%;
+  padding-top: 4px;
+}
+
+.hire-me .hire-img {
+  width: 170px;
+  height: 190px;
+  clip-path: circle(80px);
+  margin: -16px 50px 0 50px;
+}
+
+.bottom-hire-me:hover {
+  animation: hire-bottom .2s forwards;
+}
+
+@keyframes hire-bottom {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5px);
+    box-shadow: rgb(83, 80, 80) 5px 5px 10px;
+  }
+}
+
+.to-do {
+  float: left;
+  margin-left: 460px;
+  margin-top:60px;
+  line-height: 1.5;
+  animation: ComeFromDown 1.5s forwards;
+}
+
+.do-head {
+  font-family: "Playfair";
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  animation: ComeFromDown 1.5s forwards;
+}
+
+.expertise {
+  float: left;
+  margin: 25px 21px;
+  padding-top: 100px;
+  top: 100px;
+  width: 290px;
+  height: 340px;
+  background-color: rgb(248, 245, 250);
+  position: relative;
+  right: 26px;
+  box-shadow: rgb(110, 105, 105) 2px 3px 4px;
+  animation: ComeFromDown 1.5s forwards;
+}
+
+
+.expertise h3 {
+  margin-left: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.expertise-grafic {
+  border-bottom: solid 3px palevioletred;
+}
+
+.expertise-web {
+  border-bottom: solid 3px blue;
+}
+
+.expertise-software {
+  border-bottom: solid 3px yellow;
+}
+
+.img-icon2 {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-top: -140px;
+  background-color: rgb(210, 231, 89);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 52% 100%, 0% 75%, 0% 25%);
+}
+
+.img-icon3 {
+  width: 50px;
+  height: 50px;
+  margin: 25% 25%;
+}
+
+.expertise p {
+  text-align: center;
+  padding-top: 20px;
 }
